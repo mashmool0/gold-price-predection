@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Give informtaion about Pirce of Gold 
-information_price = pd.read_csv('gold_price_dayli_oanda.csv')
+information_price = pd.read_csv('Main_Plot_Source_code/gold_price_dayli_oanda.csv')
 
 
 class Checklines:

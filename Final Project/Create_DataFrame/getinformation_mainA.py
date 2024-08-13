@@ -7,8 +7,6 @@ from columns_valuesA import columns_values
 from create_dataframeA import create_dataframe
 from index_date import index_date
 # User and Pass and path URL 
-# Amirmahdi@Soltan1383
-# amirmsh20003@gmail.com
 # https://www.tradingview.com/chart/qCGg4jUl/?symbol=OANDA%3AXAUUSD
 # except Exception as e:
 #     print('ERRRRRRRRRRRRRROOORRRRRRRRRRR\n')

@@ -16,10 +16,14 @@ def OpenWeb(Detail:bool,driver2):
         try:
             # Open Website 
             driver2 = webdriver.Firefox()
-            driver2.get('https://www.tradingview.com/chart/?symbol=OANDA%3AXAUUSD')
+            driver2.get('https://www.tradingview.com/')
             sleep(2)
             driver2.maximize_window()
-
+            ready  = input('are you ready ?(y/n)  --> change your url to your chart you want then  enter y') 
+            if ready == 'y' : 
+                pass 
+            else : 
+                return 
             # Check for specific errors (404 and 403)
             if "404" in driver2.title:
                 print("Error 404: Page not found")
@@ -45,6 +49,7 @@ def OpenWeb(Detail:bool,driver2):
             
     def price_per_time() : 
         try : 
+            
             price_pertime = driver2.find_element(
             by=By.XPATH, value='/html/body/div[2]/div[6]/div/div[2]/div[1]/div[1]/div[2]/div[2]/div/div[2]/div[2]/span[1]/span[1]')
             return float(price_pertime.text),cl.line1,cl.line2,cl.line3,cl.line4,cl.line5,cl.line6,cl.line7,datetime.now()
